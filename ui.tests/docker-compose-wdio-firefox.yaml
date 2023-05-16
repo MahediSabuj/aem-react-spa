@@ -1,0 +1,32 @@
+#
+# DO NOT MODIFY
+#
+
+version: '3'
+services:
+  tests:
+    environment:
+      - SELENIUM_BASE_URL=http://selenium-firefox:4444
+      - SELENIUM_BROWSER=firefox
+      - AEM_AUTHOR_URL
+      - AEM_AUTHOR_USERNAME
+      - AEM_AUTHOR_PASSWORD
+      - AEM_PUBLISH_URL
+      - AEM_PUBLISH_USERNAME
+      - AEM_PUBLISH_PASSWORD
+      - REPORTS_PATH=/tmp/reports/wdio-firefox
+      - SHARED_FOLDER=/tmp/shared
+      - HEADLESS_BROWSER
+    volumes:
+      - ./target/reports:/tmp/reports
+      - 'shared:/tmp/shared'
+      - 'shared:/usr/src/app/assets'
+    image: 'com.aem.react.spa-aem-react-spa.ui.tests/ui.tests:latest'
+  selenium-firefox:
+    image: 'selenium/standalone-firefox-debug'
+    ports:
+      - 4444:4444
+    volumes:
+      - 'shared:/tmp/shared'
+volumes:
+  shared:
