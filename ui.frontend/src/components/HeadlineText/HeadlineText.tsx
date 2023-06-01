@@ -8,7 +8,7 @@ import extractModelId from '../../utils/extract-model-id';
 
 import './HeadlineText.css';
 
-const RESOURCE_TYPE = 'aem-react-spa/components/text';
+const RESOURCE_TYPE = 'aem-react-spa/components/content/headline-text/v1/headline-text';
 
 const HeadlineTextConfig = {
   emptyLabel: 'Headline & Text',
