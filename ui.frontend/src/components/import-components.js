@@ -3,6 +3,7 @@ import withAsyncImport from "../utils/withAsyncImport";
 import './Page/Page';
 import './Container/Container';
 import './ExperienceFragment/ExperienceFragment';
+import './HeadlineText/HeadlineText';
 
 import { MapTo } from '@adobe/aem-react-editable-components';
 
@@ -32,9 +33,6 @@ import {
   ListV2,ListV2IsEmptyFn
 } from '@adobe/aem-core-components-react-base';
 
-//lazyload / code splitting example of an internal component
-const LazyTextComponent = withAsyncImport(() => import(`./Text/Text`));
-
 //lazyload / code splitting examples of external components
 const TitleV2 = withAsyncImport(() => import(`@adobe/aem-core-components-react-base/dist/authoring/title/v2/TitleV2`));
 const CarouselV1 = withAsyncImport(() => import(`@adobe/aem-core-components-react-spa/dist/container/carousel/v1/CarouselV1`));
@@ -59,20 +57,3 @@ MapTo('aem-react-spa/components/tabs')(TabsV1, {isEmpty: TabsV1IsEmptyFn});
 MapTo('aem-react-spa/components/accordion')(AccordionV1, {isEmpty: AccordionV1IsEmptyFn});
 MapTo('aem-react-spa/components/carousel')(CarouselV1, {isEmpty: CarouselV1IsEmptyFn});
 MapTo('aem-react-spa/components/container')(ContainerV1, {isEmpty: ContainerV1IsEmptyFn});
-
-
-//lazy load of internal component (hello world)
-
-/**
- * Default Edit configuration for the Text component that interact with the Core Text component and sub-types
- *
- * @type EditConfig
- */
-const TextEditConfig = {
-  emptyLabel: 'Text',
-  isEmpty: function (props) {
-    return !props || !props.text || props.text.trim().length < 1;
-  }
-};
-
-MapTo('aem-react-spa/components/text')(LazyTextComponent, TextEditConfig);
