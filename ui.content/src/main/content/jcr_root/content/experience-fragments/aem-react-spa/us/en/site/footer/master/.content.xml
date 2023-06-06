@@ -16,7 +16,7 @@
         sling:resourceType="aem-react-spa/components/separator"/>
       <text
         jcr:primaryType="nt:unstructured"
-        sling:resourceType="aem-react-spa/components/text"
+        sling:resourceType="aem-react-spa/components/content/headline-text/v1/headline-text"
         text="&lt;p>Copyright 2023, AEM React (SPA).&amp;nbsp;All rights reserved.&lt;/p>&#xd;&#xa;&lt;p>345 Park Avenue,&amp;nbsp;San Jose, CA 95110-2704, USA&lt;/p>&#xd;&#xa;"
         textIsRich="true"/>
     </root>

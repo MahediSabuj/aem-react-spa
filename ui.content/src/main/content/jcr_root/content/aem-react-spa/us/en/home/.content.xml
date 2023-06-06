@@ -9,12 +9,12 @@
       sling:resourceType="wcm/foundation/components/responsivegrid">
       <responsivegrid jcr:primaryType="nt:unstructured"
         sling:resourceType="wcm/foundation/components/responsivegrid">
-        <text jcr:primaryType="nt:unstructured"
-          sling:resourceType="aem-react-spa/components/text"
+        <headline_text jcr:primaryType="nt:unstructured"
+          sling:resourceType="aem-react-spa/components/content/headline-text/v1/headline-text"
           text="&lt;p>Hello World!&lt;/p>"
           textIsRich="true">
           <cq:responsive jcr:primaryType="nt:unstructured"/>
-        </text>
+        </headline_text>
       </responsivegrid>
     </root>
   </jcr:content>

@@ -4,5 +4,6 @@
   jcr:mixinTypes="[rep:AccessControllable]">
   <xf/>
   <rep:policy/>
-  <page/>
+  <spa-app/>
+  <spa-page/>
 </jcr:root>
