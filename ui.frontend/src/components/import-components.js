@@ -4,6 +4,7 @@ import './Page/Page';
 import './Container/Container';
 import './ExperienceFragment/ExperienceFragment';
 import './HeadlineText/HeadlineText';
+import './Navigation/Navigation';
 
 import { MapTo } from '@adobe/aem-react-editable-components';
 
@@ -26,7 +27,6 @@ import {
   ButtonV1,ButtonV1IsEmptyFn,
   ImageV2,ImageV2IsEmptyFn,
   LanguageNavigationV1,
-  NavigationV1,
   TeaserV1,TeaserV1IsEmptyFn,
   DownloadV1,DownloadV1IsEmptyFn,
   SeparatorV1,SeparatorV1IsEmptyFn,
@@ -49,7 +49,6 @@ MapTo('aem-react-spa/components/title')(TitleV2, {isEmpty: TitleV2IsEmptyFn});
 
 
 MapTo('aem-react-spa/components/breadcrumb')(BreadCrumbV2, {isEmpty: BreadCrumbV2IsEmptyFn});
-MapTo('aem-react-spa/components/navigation')(NavigationV1);
 MapTo('aem-react-spa/components/languagenavigation')(LanguageNavigationV1);
 
 
