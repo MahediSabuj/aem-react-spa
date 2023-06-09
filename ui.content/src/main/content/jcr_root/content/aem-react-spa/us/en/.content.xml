@@ -6,4 +6,9 @@
     jcr:title="English"
     cq:template="/conf/aem-react-spa/settings/wcm/templates/spa-app-template"
     sling:resourceType="aem-react-spa/components/spa"/>
+  <have-your-say/>
+  <rethink-your-ra/>
+  <people-like-you/>
+  <discussion-guide/>
+  <newsletter-registration/>
 </jcr:root>

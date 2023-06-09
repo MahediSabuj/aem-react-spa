@@ -16,6 +16,7 @@
         collectAllPages="false"
         navigationRoot="/content/aem-react-spa/us/en"
         skipNavigationRoot="false"
+        structureStart="1"
         structureDepth="1"/>
       <languagenavigation jcr:primaryType="nt:unstructured"
         sling:resourceType="aem-react-spa/components/languagenavigation"
