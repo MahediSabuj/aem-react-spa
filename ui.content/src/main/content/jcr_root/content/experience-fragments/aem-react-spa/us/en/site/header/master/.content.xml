@@ -12,7 +12,7 @@
       sling:resourceType="aem-react-spa/components/container"
       layout="simple">
       <navigation jcr:primaryType="nt:unstructured"
-        sling:resourceType="aem-react-spa/components/navigation"
+        sling:resourceType="aem-react-spa/components/content/navigation/v1/navigation"
         collectAllPages="false"
         navigationRoot="/content/aem-react-spa/us/en"
         skipNavigationRoot="false"
