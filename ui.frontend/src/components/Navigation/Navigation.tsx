@@ -20,7 +20,7 @@ const NavigationItem = (item: NavigationV1Item) => {
 
   return (
     <li className={`${cssClass}${activeClass}`}>
-      <a className={item.baseCssClass + '__item-link'} href={item.link.url} title={item.title}>
+      <a className={`${item.baseCssClass}__item-link`} href={item.link.url} title={item.title}>
         {item.title}
       </a>
     </li>
