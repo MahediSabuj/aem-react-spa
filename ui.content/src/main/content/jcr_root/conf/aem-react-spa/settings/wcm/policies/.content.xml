@@ -5,6 +5,21 @@
   <rep:policy/>
   <aem-react-spa jcr:primaryType="nt:unstructured">
     <components jcr:primaryType="nt:unstructured">
+      <content jcr:primaryType="nt:unstructured">
+        <image jcr:primaryType="nt:unstructured">
+          <v1 jcr:primaryType="nt:unstructured">
+            <image jcr:primaryType="nt:unstructured">
+              <policy jcr:primaryType="nt:unstructured"
+                jcr:title="Image Policy"
+                jpegQuality="{Long}85"
+                disableLazyLoading="false"
+                allowUpload="false"
+                allowedRenditionWidths="[320,480,600,800,1024,1200,1600]"
+                sling:resourceType="wcm/core/components/policy/policy"/>
+            </image>
+          </v1>
+        </image>
+      </content>
       <form jcr:primaryType="nt:unstructured">
         <container jcr:primaryType="nt:unstructured">
           <form-container jcr:primaryType="nt:unstructured"

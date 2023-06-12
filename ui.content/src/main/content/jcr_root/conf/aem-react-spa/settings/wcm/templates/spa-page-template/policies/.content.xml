@@ -9,7 +9,21 @@
       sling:resourceType="wcm/core/components/policies/mapping">
       <responsivegrid jcr:primaryType="nt:unstructured"
         cq:policy="wcm/foundation/components/responsivegrid/spa-default"
-        sling:resourceType="wcm/core/components/policies/mapping"/>
+        sling:resourceType="wcm/core/components/policies/mapping">
+        <aem-react-spa jcr:primaryType="nt:unstructured">
+          <components jcr:primaryType="nt:unstructured">
+            <content jcr:primaryType="nt:unstructured">
+              <image jcr:primaryType="nt:unstructured">
+                <v1 jcr:primaryType="nt:unstructured">
+                  <image jcr:primaryType="nt:unstructured"
+                    cq:policy="aem-react-spa/components/content/image/v1/image/policy"
+                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                </v1>
+              </image>
+            </content>
+          </components>
+        </aem-react-spa>
+      </responsivegrid>
     </root>
   </jcr:content>
 </jcr:root>
