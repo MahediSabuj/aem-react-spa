@@ -6,6 +6,19 @@ import './Navigation.css';
 
 const RESOURCE_TYPE = 'aem-react-spa/components/content/navigation/v1/navigation';
 
+interface Link {
+  isValid: boolean;
+  url: string;
+}
+
+interface NavigationItem extends NavigationV1Item {
+  link: Link;
+}
+
+interface NavigationModel extends NavigationV1Model {
+  items: NavigationItem[];
+}
+
 const NavigationConfig = {
   emptyLabel: 'Navigation',
   isEmpty: function (props: NavigationV1Model) {
@@ -13,8 +26,7 @@ const NavigationConfig = {
   }
 };
 
-const NavigationItem = (item: NavigationV1Item) => {
-  console.log(item);
+const NavigationItem = (item: NavigationItem) => {
   const cssClass = `${item.baseCssClass}__item ${item.baseCssClass}__item--level-${item.level}`;
   const activeClass = item.active ? ` ${item.baseCssClass}__item--active` : '';
 
@@ -27,12 +39,12 @@ const NavigationItem = (item: NavigationV1Item) => {
   )
 }
 
-const NavigationGroup = (navigationModel: NavigationV1Model) => {
+const NavigationGroup = (navigationModel: NavigationModel) => {
   const { items, baseCssClass } = navigationModel;
   const hasItems = !!items && items.length > 0;
 
   return (
-    hasItems && (
+    hasItems ? (
       <ul className={`${baseCssClass}__group`}>
         {items.map((item, index) => (
           <NavigationItem key={`${item.baseCssClass}__item-${index}`}
@@ -40,11 +52,11 @@ const NavigationGroup = (navigationModel: NavigationV1Model) => {
             baseCssClass={baseCssClass}/>
         ))}
       </ul>
-    )
+    ) : null
   );
 }
 
-const Navigation = (props: NavigationV1Model) => {
+const Navigation = (props: NavigationModel) => {
   return (
     <nav className={props.baseCssClass}
       role='navigation'
@@ -55,7 +67,5 @@ const Navigation = (props: NavigationV1Model) => {
   );
 }
 
-MapTo(RESOURCE_TYPE)(
-  withStandardBaseCssClass(Navigation, 'cmp-navigation'),
-  NavigationConfig
-);
+// @ts-ignore
+MapTo(RESOURCE_TYPE)(withStandardBaseCssClass(Navigation, 'cmp-navigation'), NavigationConfig);
