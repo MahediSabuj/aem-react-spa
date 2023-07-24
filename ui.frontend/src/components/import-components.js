@@ -4,6 +4,7 @@ import './Page/Page';
 import './Container/Container';
 import './ExperienceFragment/ExperienceFragment';
 import './HeadlineText/HeadlineText';
+import './Teaser/Teaser';
 
 import { MapTo } from '@adobe/aem-react-editable-components';
 
