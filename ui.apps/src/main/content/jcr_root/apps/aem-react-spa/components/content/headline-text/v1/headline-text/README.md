@@ -7,8 +7,10 @@ Text component written in HTL that provides a section of rich text.
 * Rich Text Editor
 
 ### Use Object
-The **Headline &amp; Text** component uses the `com.adobe.cq.wcm.core.components.models.Text` Sling model as its Use-object. The current implementation reads
-the following resource properties:
+The **Headline &amp; Text** component uses the `com.adobe.cq.wcm.core.components.models.Text` Sling model as its Use-object. 
+
+### Edit Dialog Properties
+The current implementation reads the following resource properties:
 
 1. `./text` - the actual text to be rendered
 2. `./textIsRich` - flag determining if the rendered text is rich or not, useful for applying the correct HTL display context
