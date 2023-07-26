@@ -17,7 +17,15 @@ class Teaser extends Container<ContainerProperties, ContainerState> {
 
     return (
       <div className='cmp-teaser'>
-        Hello Teaser
+        <div className='cmp-teaser__text'>
+          {this.childComponents['teaser_text']}
+        </div>
+        <div className='cmp-teaser__action'>
+          {this.childComponents['teaser_action']}
+        </div>
+        <div className='cmp-teaser__image'>
+          {this.childComponents['teaser_image']}
+        </div>
       </div>
     );
   }
