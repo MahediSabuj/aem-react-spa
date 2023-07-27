@@ -18,13 +18,13 @@ class Teaser extends Container<ContainerProperties, ContainerState> {
     return (
       <div className='cmp-teaser'>
         <div className='cmp-teaser__text'>
-          {this.childComponents['teaser_text']}
+          {this.childComponents[0]}
         </div>
         <div className='cmp-teaser__action'>
-          {this.childComponents['teaser_action']}
+          {this.childComponents[1]}
         </div>
         <div className='cmp-teaser__image'>
-          {this.childComponents['teaser_image']}
+          {this.childComponents[2]}
         </div>
       </div>
     );
