@@ -13,8 +13,6 @@ const TeaserConfig = {
 
 class Teaser extends Container<ContainerProperties, ContainerState> {
   render() {
-    console.log('items', this.props.cqItems);
-
     return (
       <div className='cmp-teaser'>
         <div className='cmp-teaser__text'>
