@@ -7,7 +7,7 @@ const TeaserConfig = {
   emptyLabel: 'Teaser',
   isEmpty: function (props: ContainerProperties) {
     console.log('Empty', props);
-    return !props || !props.cqItemsOrder || !props.cqItemsOrder.length < 1;
+    return !props || !props.cqItemsOrder || props.cqItemsOrder.length < 1;
   }
 };
 
@@ -31,4 +31,5 @@ class Teaser extends Container<ContainerProperties, ContainerState> {
   }
 }
 
+// @ts-ignore
 export default MapTo(RESOURCE_TYPE)(Teaser, TeaserConfig);
