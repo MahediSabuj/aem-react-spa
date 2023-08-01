@@ -6,7 +6,6 @@ const RESOURCE_TYPE = 'aem-react-spa/components/content/teaser/v1/teaser';
 const TeaserConfig = {
   emptyLabel: 'Teaser',
   isEmpty: function (props: ContainerProperties) {
-    console.log('Empty', props);
     return !props || !props.cqItemsOrder || props.cqItemsOrder.length < 1;
   }
 };
