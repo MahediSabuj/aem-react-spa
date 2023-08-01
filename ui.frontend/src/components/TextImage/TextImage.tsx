@@ -1,21 +1,29 @@
 import React from 'react';
-import { MapTo } from "@adobe/aem-react-editable-components";
+import { Container, ContainerProperties, ContainerState, MapTo } from "@adobe/aem-react-editable-components";
 
 const RESOURCE_TYPE = 'aem-react-spa/components/content/text-image/v1/text-image';
 
 const TextImageConfig = {
   emptyLabel: 'Text & Image',
-  isEmpty: function () {
-    return false;
+  isEmpty: function (props: ContainerProperties) {
+    return !props || !props.cqItemsOrder || props.cqItemsOrder.length < 1;
   }
 };
 
-const TextImage = () => {
-  return (
-    <div className='cmp-text-image'>
-      Text & Image Component
-    </div>
-  );
+class TextImage extends Container<ContainerProperties, ContainerState> {
+  render() {
+    return (
+        <div className='cmp-text-image'>
+          <div className='cmp-text-image__text'>
+            {this.childComponents[0]}
+          </div>
+          <div className='cmp-text-image__image'>
+            {this.childComponents[1]}
+          </div>
+        </div>
+    );
+  }
 }
 
+// @ts-ignore
 MapTo(RESOURCE_TYPE)(TextImage, TextImageConfig);

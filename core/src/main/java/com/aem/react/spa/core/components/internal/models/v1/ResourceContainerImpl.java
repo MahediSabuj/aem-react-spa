@@ -1,4 +1,4 @@
-package com.aem.react.spa.core.components.internal;
+package com.aem.react.spa.core.components.internal.models.v1;
 
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.SlingModelFilter;

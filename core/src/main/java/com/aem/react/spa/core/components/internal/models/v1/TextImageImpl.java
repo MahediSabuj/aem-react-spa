@@ -18,7 +18,7 @@ import org.apache.sling.models.annotations.Model;
   name = ExporterConstants.SLING_MODEL_EXPORTER_NAME,
   extensions = ExporterConstants.SLING_MODEL_EXTENSION
 )
-public class TextImageImpl implements TextImage {
+public class TextImageImpl extends ResourceContainerImpl implements TextImage {
     public static final String RESOURCE_TYPE = "aem-react-spa/components/content/text-image/v1/text-image";
 
     @Override
