@@ -13,7 +13,6 @@ import io.wcm.testing.mock.aem.junit5.AemContextCallback;
  * Sets up {@link AemContext} for unit tests in this application.
  */
 public final class AppAemContext {
-
     private AppAemContext() {
         // static methods only
     }
@@ -37,9 +36,9 @@ public final class AppAemContext {
      */
     public static AemContextBuilder newAemContextBuilder(ResourceResolverType resourceResolverType) {
         return new AemContextBuilder()
-                .plugin(CACONFIG)
-                .plugin(CORE_COMPONENTS)
-                .afterSetUp(SETUP_CALLBACK);
+            .plugin(CACONFIG)
+            .plugin(CORE_COMPONENTS)
+            .afterSetUp(SETUP_CALLBACK);
     }
 
     /**
@@ -51,5 +50,4 @@ public final class AppAemContext {
             // custom project initialization code for every unit test
         }
     };
-
 }

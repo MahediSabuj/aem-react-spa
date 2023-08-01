@@ -16,7 +16,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(AemContextExtension.class)
 class SimpleServletTest {
-
     private SimpleServlet fixture = new SimpleServlet();
 
     @Test

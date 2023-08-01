@@ -26,7 +26,6 @@ import static org.mockito.Mockito.mock;
 
 @ExtendWith(AemContextExtension.class)
 class LoggingFilterTest {
-
     private LoggingFilter fixture = new LoggingFilter();
 
     private TestLogger logger = TestLoggerFactory.getTestLogger(fixture.getClass());
@@ -35,7 +34,6 @@ class LoggingFilterTest {
     void setup() {
         TestLoggerFactory.clear();
     }
-
 
     @Test
     void doFilter(AemContext context) throws IOException, ServletException {

@@ -16,16 +16,13 @@ import uk.org.lidalia.slf4jtest.TestLogger;
 import uk.org.lidalia.slf4jtest.TestLoggerFactory;
 
 class SimpleResourceListenerTest {
-
     private SimpleResourceListener fixture = new SimpleResourceListener();
 
     private TestLogger logger = TestLoggerFactory.getTestLogger(fixture.getClass());
 
     @Test
     void handleEvent() {
-        
         ResourceChange change = new ResourceChange(ChangeType.ADDED,"/content/test", false);
-        
         fixture.onChange(Arrays.asList(change));
 
         List<LoggingEvent> events = logger.getLoggingEvents();
