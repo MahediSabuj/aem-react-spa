@@ -4,6 +4,7 @@ import './Page/Page';
 import './Container/Container';
 import './ExperienceFragment/ExperienceFragment';
 import './HeadlineText/HeadlineText';
+import './Teaser/Teaser';
 
 import { MapTo } from '@adobe/aem-react-editable-components';
 
@@ -27,7 +28,6 @@ import {
   ImageV2,ImageV2IsEmptyFn,
   LanguageNavigationV1,
   NavigationV1,
-  TeaserV1,TeaserV1IsEmptyFn,
   DownloadV1,DownloadV1IsEmptyFn,
   SeparatorV1,SeparatorV1IsEmptyFn,
   ListV2,ListV2IsEmptyFn
@@ -43,7 +43,6 @@ MapTo('aem-react-spa/components/list')(ListV2, {isEmpty: ListV2IsEmptyFn});
 MapTo('aem-react-spa/components/separator')(SeparatorV1, {isEmpty: SeparatorV1IsEmptyFn});
 
 MapTo('aem-react-spa/components/button')(ButtonV1, {isEmpty: ButtonV1IsEmptyFn});
-MapTo('aem-react-spa/components/teaser')(TeaserV1, {isEmpty: TeaserV1IsEmptyFn});
 MapTo('aem-react-spa/components/image')(ImageV2, {isEmpty: ImageV2IsEmptyFn});
 MapTo('aem-react-spa/components/title')(TitleV2, {isEmpty: TitleV2IsEmptyFn});
 
