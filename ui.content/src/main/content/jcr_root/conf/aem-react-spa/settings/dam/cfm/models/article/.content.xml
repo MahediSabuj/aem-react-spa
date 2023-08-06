@@ -36,7 +36,8 @@
               <granite:data jcr:primaryType="nt:unstructured"/>
             </_x0031_689938814181>
             <_x0031_689938946527 jcr:primaryType="nt:unstructured"
-            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+              granite:class="cfm-dialog-dropdown-showhide"
+              sling:resourceType="granite/ui/components/coral/foundation/form/select"
               emptyOption="{Boolean}true"
               fieldLabel="Article Type"
               listOrder="6"
@@ -57,17 +58,20 @@
               <datasource jcr:primaryType="nt:unstructured"
                 sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
                 variant="default"/>
-              <granite:data jcr:primaryType="nt:unstructured"/>
+              <granite:data jcr:primaryType="nt:unstructured"
+                showhidetargetvalue="blog"
+                cfm-dialog-dropdown-showhide-target="#cf-tab-1"/>
             </_x0031_689938946527>
             <_x0031_689938985967 jcr:primaryType="nt:unstructured"
-              sling:resourceType="dam/cfm/models/editor/components/tabplaceholder"
-              fieldLabel="Blog Post"
-              listOrder="21"
-              metaType="tab-placeholder"
-              name="placeholder"
-              renderReadOnly="false"
-              showEmptyInReadOnly="true"
-              valueType="string/tab"/>
+              granite:class="tab-container"
+                sling:resourceType="dam/cfm/models/editor/components/tabplaceholder"
+                fieldLabel="Blog Post"
+                listOrder="21"
+                metaType="tab-placeholder"
+                name="placeholder"
+                renderReadOnly="false"
+                showEmptyInReadOnly="true"
+                valueType="string/tab" />
             <_x0031_689938999650 jcr:primaryType="nt:unstructured"
               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
               fieldLabel="Favorite Player"
