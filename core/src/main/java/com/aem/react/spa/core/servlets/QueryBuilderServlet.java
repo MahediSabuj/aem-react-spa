@@ -40,7 +40,7 @@ public class QueryBuilderServlet extends SlingAllMethodsServlet {
         predicateMap.put("4_orderby", "@jcr:content/jcr:lastModified");
         predicateMap.put("4_orderby.sort", "desc");
 
-        // In case you want to filter by metadata/cq:tags property
+        // In case you want to search by metadata/cq:tags property
         // predicateMap.put("5_property", "jcr:content/metadata/cq:tags");
         // predicateMap.put("5_property.value", "aem-react-spa:us/articles/aem-cloud");
 
