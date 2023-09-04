@@ -1,0 +1,10 @@
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+  jcr:mixinTypes="[rep:AccessControllable]"
+  jcr:primaryType="nt:folder">
+  <aem-react-spa jcr:primaryType="sling:Folder">
+    <endpoint
+      jcr:primaryType="nt:unstructured"
+      jcr:title="AEM React SPA Endpoint"
+      sling:resourceType="graphql/sites/components/endpoint"/>
+  </aem-react-spa>
+</jcr:root>

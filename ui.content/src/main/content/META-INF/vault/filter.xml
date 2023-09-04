@@ -5,4 +5,5 @@
   <filter root="/content/dam/aem-react-spa"/>
   <filter root="/content/dam/aem-react-spa/asset.jpg"/>
   <filter root="/content/experience-fragments/aem-react-spa"/>
+  <filter root="/content/cq:graphql/aem-react-spa" />
 </workspaceFilter>
