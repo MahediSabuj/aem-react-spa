@@ -26,7 +26,7 @@ import java.util.*;
     Constants.SERVICE_DESCRIPTION + "=Query Builder Servlet",
     ServletResolverConstants.SLING_SERVLET_METHODS + "=" + HttpConstants.METHOD_GET,
     ServletResolverConstants.SLING_SERVLET_PATHS + "=/bin/public/aem-react-spa/query-builder"
-  })
+})
 public class QueryBuilderServlet extends SlingAllMethodsServlet {
     @Override
     protected void doGet(final SlingHttpServletRequest request, final SlingHttpServletResponse response) throws IOException {
