@@ -25,8 +25,7 @@ public class AssetWorkflowProcess implements WorkflowProcess {
   public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap metaDataMap) throws WorkflowException {
     final String path = workItem.getWorkflowData().getPayload().toString();
 
-    try {
-      ResourceResolver resourceResolver = workflowSession.adaptTo(ResourceResolver.class);
+    try(ResourceResolver resourceResolver = workflowSession.adaptTo(ResourceResolver.class)) {
       Resource assetResource = resourceResolver.getResource(path);
 
       if(assetResource != null) {
