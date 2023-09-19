@@ -2,9 +2,7 @@ package com.aem.react.spa.core.workflow.process;
 
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
-import org.apache.sling.api.resource.ResourceResolverFactory;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
 
 import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.WorkflowSession;
