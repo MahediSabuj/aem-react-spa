@@ -35,8 +35,7 @@ public class AssetWorkflowProcess implements WorkflowProcess {
         Node collectionNode;
         if (assetNode.hasNode("jcr:content/comments")) {
           collectionNode = assetNode.getNode ("jcr:content/comments");
-        } else
-        {
+        } else {
           collectionNode = assetNode.addNode("jcr:content/comments");
           collectionNode.setPrimaryType ("nt:unstructured");
           collectionNode.addMixin("mix:lastModified");
