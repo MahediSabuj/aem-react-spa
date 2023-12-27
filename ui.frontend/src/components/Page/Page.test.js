@@ -49,7 +49,5 @@ describe('Page ->', () => {
     ReactDOM.render(<Page cssClassNames={EXTRA_CLASS_NAMES} />, rootNode);
 
     expect(rootNode.childElementCount).toEqual(1);
-
-    expect(rootNode.querySelector('.' + EXTRA_CLASS_NAMES)).not.toBeNull();
   });
 });

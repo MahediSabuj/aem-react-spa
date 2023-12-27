@@ -1,6 +1,5 @@
 import React from 'react';
-import { MapTo } from '@adobe/aem-react-editable-components';
-import { TextV2Model } from '@adobe/aem-core-components-react-base';
+import { MapTo, EditableComponent } from '@adobe/aem-react-editable-components';
 import SanitizeHtml from 'sanitize-html';
 
 import sanitizeWhiteList from '../sanitize-html.whitelist';
@@ -12,12 +11,12 @@ const RESOURCE_TYPE = 'aem-react-spa/components/content/headline-text/v1/headlin
 
 const HeadlineTextConfig = {
   emptyLabel: 'Headline & Text',
-  isEmpty: function (props: TextV2Model) {
+  isEmpty: function (props) {
     return !props || !props.text || props.text.trim().length < 1;
   }
 };
 
-const HeadlineText = (props: TextV2Model) => {
+const HeadlineText = (props) => {
   const richTextContent = () => {
     const text = props.text || '';
 
@@ -39,4 +38,12 @@ const HeadlineText = (props: TextV2Model) => {
   return props.richText ? richTextContent() : textContent();
 }
 
-MapTo(RESOURCE_TYPE)(HeadlineText, HeadlineTextConfig);
+const EditableHeadlineText = (props) => {
+  return (
+      <EditableComponent config={HeadlineTextConfig} {...props}>
+        <HeadlineText {...props} />
+      </EditableComponent>
+  );
+};
+
+MapTo(RESOURCE_TYPE)(EditableHeadlineText);
